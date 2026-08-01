@@ -14,7 +14,7 @@ export const AboutSection: FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
-            <span className="text-xs uppercase tracking-[0.2em] text-white/50 block mb-2 font-mono">01 // ABOUT NGUYEN KHANHLINH</span>
+            <span className="text-xs uppercase tracking-[0.2em] text-white/50 block mb-2 font-mono">01 // ABOUT NGUYEN KHANH LINH</span>
             <h2 className="font-instrument-serif text-5xl sm:text-6xl md:text-7xl font-normal text-white">
               Shaping the Future of Audit &amp; Assurance.
             </h2>
@@ -29,7 +29,7 @@ export const AboutSection: FC = () => {
           <div className="liquid-glass rounded-2xl p-8 space-y-4 md:col-span-2">
             <h3 className="text-2xl font-semibold text-white">Future Auditor &amp; ACCA Candidate</h3>
             <p className="text-white/75 leading-relaxed text-sm md:text-base">
-              Hi, I&apos;m Nguyen KhanhLinh, a student of K62 Accounting and Auditing with ACCA orientation. With a solid academic foundation (GPA 3.58/4.0) and 7/9 ACCA Applied Skill Papers cleared, I combine theoretical financial reporting mastery with practical leadership and research capabilities.
+              Hi, I&apos;m Nguyen Khanh Linh, a student of K62 Accounting and Auditing with ACCA orientation. With a solid academic foundation (GPA 3.58/4.0) and 7/9 ACCA Applied Skill Papers cleared, I combine theoretical financial reporting mastery with practical leadership and research capabilities.
             </p>
             <div className="pt-4 flex flex-wrap gap-2">
               <span className="px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/10 text-white/90">ACCA Track (7/9 Papers)</span>

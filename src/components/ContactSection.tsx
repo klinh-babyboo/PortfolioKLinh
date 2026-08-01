@@ -5,7 +5,7 @@ export const ContactSection: FC = () => {
   const [copied, setCopied] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
-  const email = "khanhlinh.accounting@gmail.com";
+  const email = "khanhlinh.ftu@gmail.com";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
@@ -152,9 +152,9 @@ export const ContactSection: FC = () => {
             <svg width="18" height="18" viewBox="0 0 256 256" fill="white">
               <path d="M 256 64 L 256 128 L 192.5 128 L 160 95 L 128 64 L 96 95 L 63.5 128 L 64 128 L 128 192 L 128 256 L 64.5 256 L 32 223 L 0 192 L 0 64 L 64 0 L 192 0 Z M 256 192 L 256 256 L 192.5 256 L 160 223 L 128 192 L 128 128 L 192 128 Z" />
             </svg>
-            <span className="font-instrument-serif text-lg text-white">Nguyen KhanhLinh</span>
+            <span className="font-instrument-serif text-lg text-white">Nguyen Khanh Linh</span>
           </div>
-          <div>© 2026 Nguyen KhanhLinh. All rights reserved. K62 Accounting and Auditing (ACCA orientation).</div>
+          <div>© 2026 Nguyen Khanh Linh. All rights reserved. K62 Accounting and Auditing (ACCA orientation).</div>
         </div>
 
       </div>
