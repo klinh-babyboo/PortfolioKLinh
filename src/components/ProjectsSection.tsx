@@ -7,36 +7,40 @@ export const ProjectsSection: FC = () => {
       category: 'Professional Certification',
       subtitle: '7/9 Applied Skill Papers Passed',
       description: 'Advanced track covering Financial Reporting (FR), Audit & Assurance (AA), Performance Management (PM), Taxation (TX), Financial Management (FM), and Business Law (LW).',
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/acca-cert.jpg',
+      fallbackImage: 'https://lh3.googleusercontent.com/d/1CZBE3NSos0jYlWul89-9SxuCV35gqQ2X',
       tags: ['ACCA Candidate', 'Audit & Assurance', 'IFRS', 'Financial Reporting'],
-      link: '#',
+      link: 'https://drive.google.com/file/d/1CZBE3NSos0jYlWul89-9SxuCV35gqQ2X/view?usp=sharing',
     },
     {
       title: 'Champion of “Hanh Trang Ke Kiem 2026” Competition',
       category: 'National Competition Champion',
       subtitle: 'First Place Winner 🏆',
       description: 'Achieved 1st place in the prestigious nationwide Accounting & Auditing competition, solving complex financial audit scenarios and strategic business cases.',
-      image: 'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/champion-2026.jpg',
+      fallbackImage: 'https://lh3.googleusercontent.com/d/1x2KexX4PND6ktaqYGIjTfIAApesiBv4c',
       tags: ['1st Place Champion', 'Auditing Case Study', 'Financial Analysis', 'Leadership'],
-      link: '#',
+      link: 'https://drive.google.com/file/d/1x2KexX4PND6ktaqYGIjTfIAApesiBv4c/view?usp=sharing',
     },
     {
       title: 'Scientific Research — National Conference Publication',
       category: 'Academic Publication',
       subtitle: 'Relationship among ESG Performance, Media Attention and Firm Resilience: Evidence from Vietnamese Listed Firms',
       description: 'Empirical research paper published in National Scientific Conference proceedings analyzing how ESG metrics and media coverage impact financial resilience during economic shocks.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/esg-research.jpg',
+      fallbackImage: 'https://lh3.googleusercontent.com/d/1BNTTDH2gho3fDl9H7Scbua8BYLcGlWC_',
       tags: ['ESG Performance', 'Media Attention', 'Firm Resilience', 'National Conference'],
-      link: '#',
+      link: 'https://drive.google.com/file/d/1BNTTDH2gho3fDl9H7Scbua8BYLcGlWC_/view?usp=sharing',
     },
     {
       title: 'Head of Media — Club of Future Accountants and Auditors (CFAA)',
       category: 'Leadership & Community',
       subtitle: 'Executive Media Director',
       description: 'Led media communications, branding strategies, event promotions, and creative direction for academic competitions and workshops organized by CFAA.',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+      image: '/images/cfaa-head-media.jpg',
+      fallbackImage: 'https://lh3.googleusercontent.com/d/1y8A07TF9SuDajfu_kEadBgCLPAggPp-D',
       tags: ['Head of Media', 'CFAA Club', 'Event Management', 'Media Strategy'],
-      link: '#',
+      link: 'https://drive.google.com/file/d/1y8A07TF9SuDajfu_kEadBgCLPAggPp-D/view?usp=sharing',
     },
   ];
 
@@ -68,8 +72,12 @@ export const ProjectsSection: FC = () => {
               <div className="relative h-64 sm:h-72 w-full overflow-hidden bg-black/40">
                 <img 
                   src={item.image} 
+                  onError={(e) => {
+                    // Fallback to Google Drive CDN if local path fails
+                    (e.target as HTMLImageElement).src = item.fallbackImage;
+                  }}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-85 group-hover:opacity-100" 
                 />
                 <div className="absolute top-4 right-4 liquid-glass px-3 py-1 rounded-full text-xs font-mono text-white/80">
                   0{idx + 1}
@@ -107,6 +115,8 @@ export const ProjectsSection: FC = () => {
 
                   <a 
                     href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label={`View ${item.title}`}
                     className="w-9 h-9 rounded-full liquid-glass flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                   >
